@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html>
+<style type="text/css">
+     html, body { height: 100%; margin: 0; padding: 0; }
+     #map { height: 100%; }
+   </style>
   <head>
     <title>Riptavise</title>
     <%= csrf_meta_tags %>
@@ -11,4 +15,6 @@
   <body>
     <%= yield %>
   </body>
+  <script src="https://maps.googleapis.com/maps/api/js?key=KEYHERE&callback=initMap" async defer></script>
+
 </html>
