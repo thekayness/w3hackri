@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  shape_id: MyString
+  integer: MyString
+  shape_pt_lat: 1.5
+  shape_pt_lng: 1.5
+  shape_pt_sequence: 1
+
+two:
+  shape_id: MyString
+  integer: MyString
+  shape_pt_lat: 1.5
+  shape_pt_lng: 1.5
+  shape_pt_sequence: 1

@@ -10,10 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20161204004003) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "shapes", force: :cascade do |t|
+    t.integer "shape_id"
+    t.float   "shape_pt_lat"
+    t.float   "shape_pt_lng"
+    t.integer "shape_pt_sequence"
+  end
 
   create_table "stg_vehicle_updates", id: false, force: :cascade do |t|
     t.string "vehicle_id",      limit: 15
@@ -48,6 +55,31 @@ ActiveRecord::Schema.define(version: 0) do
     t.string "stop_id",         limit: 15
     t.string "TIMESTAMP",       limit: 15
     t.string "file_name",       limit: 100
+  end
+
+  create_table "stops", force: :cascade do |t|
+    t.integer "stop_id"
+    t.string  "stop_name"
+    t.float   "lat"
+    t.float   "lng"
+  end
+
+  create_table "tripupdates", id: false, force: :cascade do |t|
+    t.string "vehicle_id",            limit: 15
+    t.string "trip_id",               limit: 15
+    t.string "route_id",              limit: 15
+    t.string "trip_start_dt",         limit: 10
+    t.string "trip_start_time",       limit: 10
+    t.string "TIMESTAMP",             limit: 15
+    t.string "stop_id",               limit: 15
+    t.string "arr_delay",             limit: 5
+    t.string "arr_time",              limit: 15
+    t.string "arr_uncertainty",       limit: 3
+    t.string "dep_delay",             limit: 5
+    t.string "dep_time",              limit: 15
+    t.string "dep_uncertainty",       limit: 3
+    t.string "schedule_relationship", limit: 3
+    t.string "stop_sequence",         limit: 3
   end
 
 end
