@@ -1,7 +1,26 @@
 <h1>Home#index</h1>
  <div>
-  <input id="show-listings" type="button" value="Show Listings">
-  <input id="hide-listings" type="button" value="Hide Listings">
+  <input id="show-stops" type="button" value="Show Stops">
+  <input id="hide-stops" type="button" value="Hide Stops">
+  <input id="show-routes" type="button" value="Show Routes">
+  <input id="hide-routes" type="button" value="Hide Routes">
+
+
+<form id="route_form">
+  Route Id: <input type="text" name="route_id" id="route_input"><br>
+  <input type="submit" value="Submit">
+</form>
+
+
+<form id="vehicle_form">
+  Trip Id: <input type="text" name="trip_id" id="trip_input"><br>
+  Date Id: <input type="text" name="date_id" id="date_input"><br> 
+  Hour Id: <input type="text" name="hour_id" id="hour_input"><br>
+  
+  <input type="submit" value="Submit">
+</form>
+
+
 </div>
 <div id="map"></div>
 <p>Find me in app/views/home/index.html.erb</p>
