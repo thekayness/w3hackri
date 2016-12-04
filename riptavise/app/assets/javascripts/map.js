@@ -10,6 +10,11 @@ function initMap() {
 		zoom: 10
 	});
 
+
+$.get( "home/trips", function( data ) {
+  alert( data.trips.length );
+});
+
 	var stops = [
  {
    "stop_id": "5",
